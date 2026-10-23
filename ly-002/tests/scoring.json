@@ -1,0 +1,308 @@
+{
+  "gate_tests": [
+    "test_outputs.py::test_natural_gate_reconstructs_reaction_assignments"
+  ],
+  "schema_version": 1,
+  "tests": {
+    "test_outputs.py::test_assignment_items_have_exact_keys": {
+      "priority": "supporting",
+      "rationale": "test_assignment_items_have_exact_keys 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_assignments_are_sorted_by_history_id": {
+      "priority": "supporting",
+      "rationale": "test_assignments_are_sorted_by_history_id 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_assignments_match_laboratory_mapping": {
+      "priority": "core",
+      "rationale": "test_assignments_match_laboratory_mapping 对应中试线的核心归属或动力学闭合结果，失败会让整批样品无法投入后续工艺判断。",
+      "weight": 0.18
+    },
+    "test_outputs.py::test_boolean_is_not_a_numeric_measurement": {
+      "priority": "boundary",
+      "rationale": "test_boolean_is_not_a_numeric_measurement 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_bundle_key_set_is_exact[bundle_id]": {
+      "priority": "supporting",
+      "rationale": "test_bundle_key_set_is_exact 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_bundle_key_set_is_exact[observations]": {
+      "priority": "supporting",
+      "rationale": "test_bundle_key_set_is_exact 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_catalyst_scale_above_public_bound_is_refused": {
+      "priority": "boundary",
+      "rationale": "test_catalyst_scale_above_public_bound_is_refused 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_changed_input_appends_one_ledger_entry": {
+      "priority": "recovery",
+      "rationale": "test_changed_input_appends_one_ledger_entry 验证失败、重跑或恢复不变量，失败会造成旧报告与交接记录不一致。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_conversion_one_is_outside_the_public_range": {
+      "priority": "boundary",
+      "rationale": "test_conversion_one_is_outside_the_public_range 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_diagnostics_count_the_laboratory_fixture": {
+      "priority": "supporting",
+      "rationale": "test_diagnostics_count_the_laboratory_fixture 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_diagnostics_has_exact_keys": {
+      "priority": "supporting",
+      "rationale": "test_diagnostics_has_exact_keys 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_duplicate_history_identifier_is_refused": {
+      "priority": "boundary",
+      "rationale": "test_duplicate_history_identifier_is_refused 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_duplicate_nested_key_is_refused": {
+      "priority": "boundary",
+      "rationale": "test_duplicate_nested_key_is_refused 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_duplicate_top_level_key_is_refused": {
+      "priority": "boundary",
+      "rationale": "test_duplicate_top_level_key_is_refused 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_elapsed_zero_is_outside_the_public_range": {
+      "priority": "boundary",
+      "rationale": "test_elapsed_zero_is_outside_the_public_range 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_every_assignment_covers_all_observation_indices": {
+      "priority": "supporting",
+      "rationale": "test_every_assignment_covers_all_observation_indices 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_failed_publish_restores_existing_ledger_bytes": {
+      "priority": "recovery",
+      "rationale": "test_failed_publish_restores_existing_ledger_bytes 验证失败、重跑或恢复不变量，失败会造成旧报告与交接记录不一致。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_failure_does_not_rewrite_the_input": {
+      "priority": "recovery",
+      "rationale": "test_failure_does_not_rewrite_the_input 验证失败、重跑或恢复不变量，失败会造成旧报告与交接记录不一致。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_flagged_items_have_exact_keys": {
+      "priority": "supporting",
+      "rationale": "test_flagged_items_have_exact_keys 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_flagged_observations_have_declared_order_and_reasons": {
+      "priority": "supporting",
+      "rationale": "test_flagged_observations_have_declared_order_and_reasons 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_history_key_set_is_exact[catalyst_scale]": {
+      "priority": "supporting",
+      "rationale": "test_history_key_set_is_exact 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_history_key_set_is_exact[history_id]": {
+      "priority": "supporting",
+      "rationale": "test_history_key_set_is_exact 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_history_key_set_is_exact[steps]": {
+      "priority": "supporting",
+      "rationale": "test_history_key_set_is_exact 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_inconsistent_bundle_refuses_with_no_consensus": {
+      "priority": "boundary",
+      "rationale": "test_inconsistent_bundle_refuses_with_no_consensus 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_invalid_existing_ledger_preserves_both_files": {
+      "priority": "recovery",
+      "rationale": "test_invalid_existing_ledger_preserves_both_files 验证失败、重跑或恢复不变量，失败会造成旧报告与交接记录不一致。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_json_parse_failure_leaves_targets_absent": {
+      "priority": "boundary",
+      "rationale": "test_invalid_json_refuses_without_output 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_kinetics_has_exact_keys": {
+      "priority": "supporting",
+      "rationale": "test_kinetics_has_exact_keys 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_kinetics_match_laboratory_reference": {
+      "priority": "core",
+      "rationale": "test_kinetics_match_laboratory_reference 对应中试线的核心归属或动力学闭合结果，失败会让整批样品无法投入后续工艺判断。",
+      "weight": 0.18
+    },
+    "test_outputs.py::test_ledger_entry_id_is_lowercase_sha256": {
+      "priority": "recovery",
+      "rationale": "test_ledger_entry_id_is_lowercase_sha256 验证失败、重跑或恢复不变量，失败会造成旧报告与交接记录不一致。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_ledger_has_exact_line_keys": {
+      "priority": "recovery",
+      "rationale": "test_ledger_has_exact_line_keys 验证失败、重跑或恢复不变量，失败会造成旧报告与交接记录不一致。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_ledger_is_compact_jsonl_with_one_lf_per_entry": {
+      "priority": "recovery",
+      "rationale": "test_ledger_is_compact_jsonl_with_one_lf_per_entry 验证失败、重跑或恢复不变量，失败会造成旧报告与交接记录不一致。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_max_assignments_must_equal_history_count": {
+      "priority": "supporting",
+      "rationale": "test_max_assignments_must_equal_history_count 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_measurement_policy_has_exact_keys": {
+      "priority": "supporting",
+      "rationale": "test_measurement_policy_has_exact_keys 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_missing_input_refuses_without_output": {
+      "priority": "boundary",
+      "rationale": "test_missing_input_refuses_without_output 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_observation_count_below_public_minimum_is_refused": {
+      "priority": "boundary",
+      "rationale": "test_observation_count_below_public_minimum_is_refused 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_observation_key_set_is_exact[conversion]": {
+      "priority": "supporting",
+      "rationale": "test_observation_key_set_is_exact 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_observation_key_set_is_exact[elapsed_s]": {
+      "priority": "supporting",
+      "rationale": "test_observation_key_set_is_exact 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_outlier_consensus_matches_laboratory_notes": {
+      "priority": "core",
+      "rationale": "test_outlier_consensus_matches_laboratory_notes 对应中试线的核心归属或动力学闭合结果，失败会让整批样品无法投入后续工艺判断。",
+      "weight": 0.14
+    },
+    "test_outputs.py::test_public_boundary_accepts_eight_histories": {
+      "priority": "boundary",
+      "rationale": "test_public_boundary_accepts_eight_histories 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_public_boundary_accepts_maximum_batch_within_limit": {
+      "priority": "boundary",
+      "rationale": "test_public_boundary_accepts_maximum_batch_within_limit 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_public_boundary_rejects_31_histories": {
+      "priority": "boundary",
+      "rationale": "test_public_boundary_rejects_31_histories 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_public_boundary_rejects_33_bundles": {
+      "priority": "boundary",
+      "rationale": "test_public_boundary_rejects_33_bundles 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_public_boundary_rejects_seven_histories": {
+      "priority": "boundary",
+      "rationale": "test_public_boundary_rejects_seven_histories 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_repeated_input_keeps_ledger_bytes": {
+      "priority": "recovery",
+      "rationale": "test_repeated_input_keeps_ledger_bytes 验证失败、重跑或恢复不变量，失败会造成旧报告与交接记录不一致。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_repeated_input_keeps_report_bytes": {
+      "priority": "recovery",
+      "rationale": "test_repeated_input_keeps_report_bytes 验证失败、重跑或恢复不变量，失败会造成旧报告与交接记录不一致。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_report_file_is_published": {
+      "priority": "recovery",
+      "rationale": "test_report_file_is_published 验证失败、重跑或恢复不变量，失败会造成旧报告与交接记录不一致。",
+      "weight": 0.008
+    },
+    "test_outputs.py::test_report_has_exact_top_level_keys": {
+      "priority": "supporting",
+      "rationale": "test_report_has_exact_top_level_keys 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.008
+    },
+    "test_outputs.py::test_report_is_compact_json_with_one_lf": {
+      "priority": "supporting",
+      "rationale": "test_report_is_compact_json_with_one_lf 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_report_preserves_declared_key_order": {
+      "priority": "supporting",
+      "rationale": "test_report_preserves_declared_key_order 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.008
+    },
+    "test_outputs.py::test_report_uses_six_and_eight_decimal_kinetics": {
+      "priority": "supporting",
+      "rationale": "test_report_uses_six_and_eight_decimal_kinetics 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_schema_version_boolean_is_refused": {
+      "priority": "boundary",
+      "rationale": "test_schema_version_boolean_is_refused 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_step_duration_range_is_enforced[0]": {
+      "priority": "boundary",
+      "rationale": "test_step_duration_range_is_enforced 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_step_duration_range_is_enforced[7200.01]": {
+      "priority": "boundary",
+      "rationale": "test_step_duration_range_is_enforced 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_step_object_has_exact_keys": {
+      "priority": "supporting",
+      "rationale": "test_step_object_has_exact_keys 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_step_temperature_above_public_bound_is_refused": {
+      "priority": "boundary",
+      "rationale": "test_step_temperature_above_public_bound_is_refused 对应公开输入边界或拒收口径，失败会让越界批次被错误放行。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_success_is_silent": {
+      "priority": "supporting",
+      "rationale": "test_success_is_silent 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.008
+    },
+    "test_outputs.py::test_top_level_key_set_is_exact[extra]": {
+      "priority": "supporting",
+      "rationale": "test_top_level_key_set_is_exact 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_top_level_key_set_is_exact[missing]": {
+      "priority": "supporting",
+      "rationale": "test_top_level_key_set_is_exact 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    },
+    "test_outputs.py::test_unassigned_bundle_readings_are_flagged": {
+      "priority": "supporting",
+      "rationale": "test_unassigned_bundle_readings_are_flagged 补充验证聚合工艺记录的完整交付行为，失败会降低结果可追溯性。",
+      "weight": 0.009
+    }
+  },
+  "weight_policy": {
+    "basis": "business_priority",
+    "core_min_share": 0.5,
+    "version": 1
+  }
+}

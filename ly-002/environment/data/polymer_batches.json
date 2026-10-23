@@ -1,0 +1,1155 @@
+{
+  "schema_version": 1,
+  "reaction_histories": [
+    {
+      "history_id": "RX-2D3-172D",
+      "steps": [
+        {
+          "duration_s": 745.0,
+          "temp_start_k": 338.719,
+          "temp_end_k": 382.222
+        },
+        {
+          "duration_s": 995.0,
+          "temp_start_k": 382.222,
+          "temp_end_k": 366.849
+        },
+        {
+          "duration_s": 1070.0,
+          "temp_start_k": 366.849,
+          "temp_end_k": 364.349
+        }
+      ],
+      "catalyst_scale": 0.72
+    },
+    {
+      "history_id": "RX-14E-A610",
+      "steps": [
+        {
+          "duration_s": 835.0,
+          "temp_start_k": 338.412,
+          "temp_end_k": 386.211
+        },
+        {
+          "duration_s": 1060.0,
+          "temp_start_k": 386.211,
+          "temp_end_k": 371.616
+        },
+        {
+          "duration_s": 1215.0,
+          "temp_start_k": 371.616,
+          "temp_end_k": 374.716
+        }
+      ],
+      "catalyst_scale": 1.0
+    },
+    {
+      "history_id": "RX-87B-7545",
+      "steps": [
+        {
+          "duration_s": 905.0,
+          "temp_start_k": 343.608,
+          "temp_end_k": 389.041
+        },
+        {
+          "duration_s": 1125.0,
+          "temp_start_k": 389.041,
+          "temp_end_k": 378.056
+        },
+        {
+          "duration_s": 1250.0,
+          "temp_start_k": 378.056,
+          "temp_end_k": 375.556
+        }
+      ],
+      "catalyst_scale": 1.28
+    },
+    {
+      "history_id": "RX-529-9A1A",
+      "steps": [
+        {
+          "duration_s": 975.0,
+          "temp_start_k": 345.561,
+          "temp_end_k": 390.514
+        },
+        {
+          "duration_s": 1250.0,
+          "temp_start_k": 390.514,
+          "temp_end_k": 367.676
+        },
+        {
+          "duration_s": 1125.0,
+          "temp_start_k": 367.676,
+          "temp_end_k": 368.476
+        }
+      ],
+      "catalyst_scale": 0.8
+    },
+    {
+      "history_id": "RX-E19-7357",
+      "steps": [
+        {
+          "duration_s": 1105.0,
+          "temp_start_k": 345.828,
+          "temp_end_k": 396.134
+        },
+        {
+          "duration_s": 995.0,
+          "temp_start_k": 396.134,
+          "temp_end_k": 374.256
+        },
+        {
+          "duration_s": 1160.0,
+          "temp_start_k": 374.256,
+          "temp_end_k": 377.356
+        }
+      ],
+      "catalyst_scale": 1.08
+    },
+    {
+      "history_id": "RX-7B0-2578",
+      "steps": [
+        {
+          "duration_s": 765.0,
+          "temp_start_k": 348.896,
+          "temp_end_k": 399.676
+        },
+        {
+          "duration_s": 1095.0,
+          "temp_start_k": 399.676,
+          "temp_end_k": 381.201
+        },
+        {
+          "duration_s": 1305.0,
+          "temp_start_k": 381.201,
+          "temp_end_k": 378.701
+        }
+      ],
+      "catalyst_scale": 1.36
+    },
+    {
+      "history_id": "RX-CE9-4CDD",
+      "steps": [
+        {
+          "duration_s": 835.0,
+          "temp_start_k": 352.105,
+          "temp_end_k": 383.69
+        },
+        {
+          "duration_s": 1160.0,
+          "temp_start_k": 383.69,
+          "temp_end_k": 371.873
+        },
+        {
+          "duration_s": 1070.0,
+          "temp_start_k": 371.873,
+          "temp_end_k": 369.373
+        }
+      ],
+      "catalyst_scale": 0.88
+    },
+    {
+      "history_id": "RX-E1C-EDAF",
+      "steps": [
+        {
+          "duration_s": 905.0,
+          "temp_start_k": 339.476,
+          "temp_end_k": 386.038
+        },
+        {
+          "duration_s": 1190.0,
+          "temp_start_k": 386.038,
+          "temp_end_k": 377.214
+        },
+        {
+          "duration_s": 1160.0,
+          "temp_start_k": 377.214,
+          "temp_end_k": 374.714
+        }
+      ],
+      "catalyst_scale": 1.16
+    },
+    {
+      "history_id": "RX-A17-514C",
+      "steps": [
+        {
+          "duration_s": 955.0,
+          "temp_start_k": 339.959,
+          "temp_end_k": 389.894
+        },
+        {
+          "duration_s": 1055.0,
+          "temp_start_k": 389.894,
+          "temp_end_k": 367.268
+        },
+        {
+          "duration_s": 1250.0,
+          "temp_start_k": 367.268,
+          "temp_end_k": 368.068
+        }
+      ],
+      "catalyst_scale": 1.44
+    },
+    {
+      "history_id": "RX-B72-79D9",
+      "steps": [
+        {
+          "duration_s": 1105.0,
+          "temp_start_k": 340.965,
+          "temp_end_k": 394.094
+        },
+        {
+          "duration_s": 1060.0,
+          "temp_start_k": 394.094,
+          "temp_end_k": 374.875
+        },
+        {
+          "duration_s": 1125.0,
+          "temp_start_k": 374.875,
+          "temp_end_k": 372.375
+        }
+      ],
+      "catalyst_scale": 0.96
+    },
+    {
+      "history_id": "RX-997-5430",
+      "steps": [
+        {
+          "duration_s": 800.0,
+          "temp_start_k": 344.152,
+          "temp_end_k": 394.98
+        },
+        {
+          "duration_s": 1185.0,
+          "temp_start_k": 394.98,
+          "temp_end_k": 380.802
+        },
+        {
+          "duration_s": 1215.0,
+          "temp_start_k": 380.802,
+          "temp_end_k": 383.902
+        }
+      ],
+      "catalyst_scale": 1.24
+    },
+    {
+      "history_id": "RX-EBC-D174",
+      "steps": [
+        {
+          "duration_s": 815.0,
+          "temp_start_k": 345.769,
+          "temp_end_k": 399.063
+        },
+        {
+          "duration_s": 1190.0,
+          "temp_start_k": 399.063,
+          "temp_end_k": 368.735
+        },
+        {
+          "duration_s": 1305.0,
+          "temp_start_k": 368.735,
+          "temp_end_k": 371.835
+        }
+      ],
+      "catalyst_scale": 0.76
+    },
+    {
+      "history_id": "RX-7E3-8B3F",
+      "steps": [
+        {
+          "duration_s": 885.0,
+          "temp_start_k": 350.361,
+          "temp_end_k": 385.347
+        },
+        {
+          "duration_s": 1030.0,
+          "temp_start_k": 385.347,
+          "temp_end_k": 376.952
+        },
+        {
+          "duration_s": 1125.0,
+          "temp_start_k": 376.952,
+          "temp_end_k": 377.752
+        }
+      ],
+      "catalyst_scale": 1.04
+    },
+    {
+      "history_id": "RX-C47-96B8",
+      "steps": [
+        {
+          "duration_s": 1010.0,
+          "temp_start_k": 350.48,
+          "temp_end_k": 388.142
+        },
+        {
+          "duration_s": 1120.0,
+          "temp_start_k": 388.142,
+          "temp_end_k": 366.399
+        },
+        {
+          "duration_s": 1215.0,
+          "temp_start_k": 366.399,
+          "temp_end_k": 367.199
+        }
+      ],
+      "catalyst_scale": 1.32
+    },
+    {
+      "history_id": "RX-896-747A",
+      "steps": [
+        {
+          "duration_s": 1105.0,
+          "temp_start_k": 338.99,
+          "temp_end_k": 391.792
+        },
+        {
+          "duration_s": 1185.0,
+          "temp_start_k": 391.792,
+          "temp_end_k": 372.057
+        },
+        {
+          "duration_s": 1305.0,
+          "temp_start_k": 372.057,
+          "temp_end_k": 375.157
+        }
+      ],
+      "catalyst_scale": 0.84
+    },
+    {
+      "history_id": "RX-6E0-F554",
+      "steps": [
+        {
+          "duration_s": 765.0,
+          "temp_start_k": 341.339,
+          "temp_end_k": 395.044
+        },
+        {
+          "duration_s": 1225.0,
+          "temp_start_k": 395.044,
+          "temp_end_k": 378.228
+        },
+        {
+          "duration_s": 1125.0,
+          "temp_start_k": 378.228,
+          "temp_end_k": 379.028
+        }
+      ],
+      "catalyst_scale": 1.12
+    },
+    {
+      "history_id": "RX-D39-B38C",
+      "steps": [
+        {
+          "duration_s": 895.0,
+          "temp_start_k": 341.409,
+          "temp_end_k": 398.793
+        },
+        {
+          "duration_s": 1055.0,
+          "temp_start_k": 398.793,
+          "temp_end_k": 367.492
+        },
+        {
+          "duration_s": 1215.0,
+          "temp_start_k": 367.492,
+          "temp_end_k": 370.592
+        }
+      ],
+      "catalyst_scale": 1.4
+    },
+    {
+      "history_id": "RX-11E-264B",
+      "steps": [
+        {
+          "duration_s": 885.0,
+          "temp_start_k": 347.16,
+          "temp_end_k": 382.723
+        },
+        {
+          "duration_s": 1120.0,
+          "temp_start_k": 382.723,
+          "temp_end_k": 375.127
+        },
+        {
+          "duration_s": 1305.0,
+          "temp_start_k": 375.127,
+          "temp_end_k": 375.927
+        }
+      ],
+      "catalyst_scale": 0.92
+    },
+    {
+      "history_id": "RX-F5B-C429",
+      "steps": [
+        {
+          "duration_s": 1035.0,
+          "temp_start_k": 348.347,
+          "temp_end_k": 386.304
+        },
+        {
+          "duration_s": 1125.0,
+          "temp_start_k": 386.304,
+          "temp_end_k": 380.755
+        },
+        {
+          "duration_s": 1070.0,
+          "temp_start_k": 380.755,
+          "temp_end_k": 383.855
+        }
+      ],
+      "catalyst_scale": 1.2
+    },
+    {
+      "history_id": "RX-3DA-7130",
+      "steps": [
+        {
+          "duration_s": 1105.0,
+          "temp_start_k": 349.726,
+          "temp_end_k": 388.816
+        },
+        {
+          "duration_s": 1225.0,
+          "temp_start_k": 388.816,
+          "temp_end_k": 370.214
+        },
+        {
+          "duration_s": 1160.0,
+          "temp_start_k": 370.214,
+          "temp_end_k": 371.014
+        }
+      ],
+      "catalyst_scale": 0.72
+    },
+    {
+      "history_id": "RX-B6F-DF3B",
+      "steps": [
+        {
+          "duration_s": 745.0,
+          "temp_start_k": 353.865,
+          "temp_end_k": 390.805
+        },
+        {
+          "duration_s": 1055.0,
+          "temp_start_k": 390.805,
+          "temp_end_k": 378.148
+        },
+        {
+          "duration_s": 1305.0,
+          "temp_start_k": 378.148,
+          "temp_end_k": 381.248
+        }
+      ],
+      "catalyst_scale": 1.0
+    },
+    {
+      "history_id": "RX-C34-4046",
+      "steps": [
+        {
+          "duration_s": 815.0,
+          "temp_start_k": 337.435,
+          "temp_end_k": 395.49
+        },
+        {
+          "duration_s": 1060.0,
+          "temp_start_k": 395.49,
+          "temp_end_k": 367.205
+        },
+        {
+          "duration_s": 1070.0,
+          "temp_start_k": 367.205,
+          "temp_end_k": 368.005
+        }
+      ],
+      "catalyst_scale": 1.28
+    },
+    {
+      "history_id": "RX-6F6-7B51",
+      "steps": [
+        {
+          "duration_s": 885.0,
+          "temp_start_k": 341.422,
+          "temp_end_k": 399.678
+        },
+        {
+          "duration_s": 1125.0,
+          "temp_start_k": 399.678,
+          "temp_end_k": 374.963
+        },
+        {
+          "duration_s": 1215.0,
+          "temp_start_k": 374.963,
+          "temp_end_k": 372.463
+        }
+      ],
+      "catalyst_scale": 0.8
+    },
+    {
+      "history_id": "RX-4B6-7C6B",
+      "steps": [
+        {
+          "duration_s": 1035.0,
+          "temp_start_k": 344.516,
+          "temp_end_k": 384.175
+        },
+        {
+          "duration_s": 1225.0,
+          "temp_start_k": 384.175,
+          "temp_end_k": 380.066
+        },
+        {
+          "duration_s": 1250.0,
+          "temp_start_k": 380.066,
+          "temp_end_k": 383.166
+        }
+      ],
+      "catalyst_scale": 1.08
+    },
+    {
+      "history_id": "RX-E8E-E27C",
+      "steps": [
+        {
+          "duration_s": 1025.0,
+          "temp_start_k": 344.761,
+          "temp_end_k": 386.699
+        },
+        {
+          "duration_s": 995.0,
+          "temp_start_k": 386.699,
+          "temp_end_k": 369.434
+        },
+        {
+          "duration_s": 1070.0,
+          "temp_start_k": 369.434,
+          "temp_end_k": 372.534
+        }
+      ],
+      "catalyst_scale": 1.36
+    },
+    {
+      "history_id": "RX-A20-FB7F",
+      "steps": [
+        {
+          "duration_s": 745.0,
+          "temp_start_k": 348.139,
+          "temp_end_k": 389.747
+        },
+        {
+          "duration_s": 1095.0,
+          "temp_start_k": 389.747,
+          "temp_end_k": 376.339
+        },
+        {
+          "duration_s": 1160.0,
+          "temp_start_k": 376.339,
+          "temp_end_k": 379.439
+        }
+      ],
+      "catalyst_scale": 0.88
+    }
+  ],
+  "sample_bundles": [
+    {
+      "bundle_id": "SPL-681-F63B",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.18764073
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.57974423
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.68506576
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.88461011
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-103-FD8C",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.002
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.2216598
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.32627021
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.37724409
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-20B-34D7",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.06507796
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.49407266
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.43893106
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.48276352
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-2C7-F039",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.04430731
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.39122002
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.37875377
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.46136044
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-698-8754",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.07965252
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.26445409
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.34990344
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.33432535
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-9D1-00CD",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.21158318
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.40904183
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.51808899
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.59120328
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-2C6-3CEA",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.11058478
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.44900613
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.57715219
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.57544934
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-E09-2A79",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.1466335
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.1813663
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.27164594
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.34462622
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-C12-A350",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.002
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.23978976
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.34529668
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.43056053
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-F21-6A18",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.05403859
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.40919077
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.47420559
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.59119819
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-95D-DD75",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.05183886
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.2729899
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.5040949
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.4323439
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-226-228D",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.05390668
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.35737123
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.47404755
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.44329895
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-E64-2CA0",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.0516731
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.26744264
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.56035012
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.54012974
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-692-A3AC",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.06891878
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.30173235
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.49131442
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.43044429
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-8FE-2484",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.09470578
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.39337723
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.45424246
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.40358211
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-00E-C6A2",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.04492673
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.21528035
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.42797494
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.35617907
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-B50-EBEF",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.16384116
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.32928975
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.41281569
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.46200177
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-2F3-7801",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.05420834
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.32611329
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.25974539
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.30892173
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-676-DB6F",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.06900546
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.27312651
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.38631442
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.43223826
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-6CC-0D1E",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.03610504
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.28564445
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.40528469
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.56632525
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-024-09A9",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.04040782
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.21921132
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.19857704
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.32519097
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-E3D-E560",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.17196382
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.1233854
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.16145815
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.18797227
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-9E6-A5BD",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.08438004
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.4367023
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.3865825
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.42016992
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-8CC-A4D3",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.03334584
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.28583912
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.26328029
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.30375907
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-01B-BA19",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.20143226
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.32861197
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.46046444
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.54345338
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-B37-7BDD",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.10382764
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.39658927
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.55643623
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.59651997
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-18B-0216",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.0364316
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.21061495
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.35393926
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.37250976
+        }
+      ]
+    },
+    {
+      "bundle_id": "SPL-094-0954",
+      "observations": [
+        {
+          "elapsed_s": 720.0,
+          "conversion": 0.10854783
+        },
+        {
+          "elapsed_s": 1440.0,
+          "conversion": 0.32461133
+        },
+        {
+          "elapsed_s": 2160.0,
+          "conversion": 0.52799737
+        },
+        {
+          "elapsed_s": 2880.0,
+          "conversion": 0.50927471
+        }
+      ]
+    }
+  ],
+  "measurement_policy": {
+    "activation_energy_bounds_j_mol": [
+      40000.0,
+      150000.0
+    ],
+    "ln_prefactor_bounds": [
+      16.0,
+      28.0
+    ],
+    "conversion_floor": 1e-09,
+    "consensus_min_points": 3,
+    "conversion_tolerance": 0.0015,
+    "max_assignments": 26
+  }
+}

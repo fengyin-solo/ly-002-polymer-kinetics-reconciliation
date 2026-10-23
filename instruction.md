@@ -50,6 +50,25 @@ python3 /app/polymer_reconcile.py \
 
 每个反应釜和托盘都必须在各自方向上一一对应；一个托盘最多舍弃一个异常读数，至少保留 `consensus_min_points` 个读数参与一致性判断。没有对应反应釜的托盘，其全部读数都要进入异常清单。
 
+## 归位与动力学闭合
+
+动力学采用一级反应模型。通用气体常数固定为 `R = 8.31446261815324 J/(mol*K)`。对反应釜 `h` 的每个温度段，温度从 `temp_start_k` 按该段实际经过时间线性变化到 `temp_end_k`；超过全部温度段总时长后不继续累计。给定活化能 `Ea`，在时刻 `t` 的热剂量为
+
+```text
+D_h(Ea, t) = integral_0^t exp(-Ea / (R * T_h(s))) ds
+B_h(Ea, t) = catalyst_scale_h * D_h(Ea, t)
+```
+
+观测转化率先换成 `y = -ln(1 - conversion)`。对反应釜 `h` 与托盘 `b`，在托盘每个观测时刻计算 `r_i = y_i / B_h(Ea, t_i)`，再取 `z_i = ln(r_i)`。如果该托盘任意观测的 `conversion <= conversion_floor`，或任意 `B_h` 非正，则该配对的得分为 `1000000`。
+
+否则令 `m = n - 1`。按 `(r_i, i)` 升序排列后，从连续 `m` 个观测中选择 `max(z) - min(z)` 最小的一组；若差值相同，选择原始下标元组字典序较小的一组。这 `m` 个下标是支持点，剩余一个下标是该配对的异常点，配对得分就是这组 `max(z) - min(z)`。
+
+反应釜和托盘数量可能不同。构造大小为 `max(history_count, bundle_count)` 的方阵：真实反应釜与真实托盘的格子填配对得分；真实反应釜到虚拟托盘、以及虚拟反应釜到虚拟托盘的格子填 `4 * conversion_tolerance`；虚拟反应釜到真实托盘的格子填 `0`。用最小总代价的一一分配同时确定托盘归属。
+
+最优分配必须覆盖全部反应釜，否则写 `no_consensus`。选定 `Ea` 后，把所有支持点的 `ln(y_i / B_h(Ea, t_i))` 排序；奇数个取正中值，偶数个取中间两个值的算术平均，得到 `ln_prefactor`。它必须落在 `ln_prefactor_bounds` 内。对每个支持点计算 `predicted = 1 - exp(exp(ln_prefactor) * B_h)`，要求 `abs(predicted - observed) <= conversion_tolerance`，否则写 `no_consensus`。`conversion_rmse` 是全部支持点该残差平方的算术平均再开平方。
+
+`Ea` 在 `activation_energy_bounds_j_mol` 内选择，使上述完整分配的配对得分总和最小；等价目标并列时选较小的 `Ea`，仍不能形成唯一一致分配时写 `no_consensus`。
+
 ## 复核报告
 
 顶层报告恰好有 `schema_version`、`kinetics`、`assignments`、`flagged_observations`、`diagnostics`、`ledger_entry_id` 六个键，顺序也按这里列出的顺序写出。

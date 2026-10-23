@@ -16,6 +16,7 @@ import pytest
 
 
 APP = Path(os.environ.get("TASK_APP", "/app/polymer_reconcile.py"))
+CANDIDATE_APP = Path(os.environ.get("TASK_CANDIDATE", str(APP)))
 DATA = Path(os.environ.get("TASK_DATA_DIR", "/data"))
 BASE_INPUT = DATA / "polymer_batches.json"
 CALL_TIMEOUT_SEC = 45
@@ -753,7 +754,7 @@ def test_failed_publish_restores_existing_ledger_bytes(tmp_path):
                 "import importlib.util",
                 "import os",
                 "import sys",
-                f"app = {str(APP)!r}",
+                f"app = {str(CANDIDATE_APP)!r}",
                 "spec = importlib.util.spec_from_file_location('candidate', app)",
                 "candidate = importlib.util.module_from_spec(spec)",
                 "spec.loader.exec_module(candidate)",

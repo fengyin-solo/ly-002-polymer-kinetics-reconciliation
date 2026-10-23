@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import copy
 import json
+import math
 import os
 import re
 import shutil
@@ -117,6 +118,7 @@ def _base_payload():
 
 
 def _prepare_case(root, payload):
+    root.mkdir(parents=True, exist_ok=True)
     input_path = root / "polymer_batches.json"
     output_path = root / "reconciliation.json"
     ledger_path = root / "experiment-ledger.jsonl"
@@ -139,6 +141,89 @@ def _subset_payload(count):
     return payload
 
 
+def _thermal_dose(steps, elapsed, activation_energy):
+    remaining = float(elapsed)
+    total = 0.0
+    gas_constant = 8.31446261815324
+    nodes = (
+        -0.9739065285171717,
+        -0.8650633666889845,
+        -0.6794095682990244,
+        -0.4333953941292472,
+        -0.1488743389816312,
+        0.1488743389816312,
+        0.4333953941292472,
+        0.6794095682990244,
+        0.8650633666889845,
+        0.9739065285171717,
+    )
+    weights = (
+        0.0666713443086881,
+        0.1494513491505806,
+        0.2190863625159820,
+        0.2692667193099963,
+        0.2955242247147529,
+        0.2955242247147529,
+        0.2692667193099963,
+        0.2190863625159820,
+        0.1494513491505806,
+        0.0666713443086881,
+    )
+    for step in steps:
+        if remaining <= 0.0:
+            break
+        duration = float(step["duration_s"])
+        used = min(remaining, duration)
+        fraction = used / duration
+        start = float(step["temp_start_k"])
+        end = start + (float(step["temp_end_k"]) - start) * fraction
+        for node, weight in zip(nodes, weights):
+            temperature = start + (end - start) * 0.5 * (node + 1.0)
+            total += 0.5 * used * weight * math.exp(
+                -activation_energy / (gas_constant * temperature)
+            )
+        remaining -= used
+    return total
+
+
+def _mixed_observation_payload():
+    payload = _subset_payload(8)
+    histories = {
+        item["history_id"]: item
+        for item in payload["reaction_histories"]
+    }
+    bundles = {
+        item["bundle_id"]: item
+        for item in payload["sample_bundles"]
+    }
+    expected = {
+        history_id: bundle_id
+        for history_id, bundle_id in EXPECTED_MAPPING.items()
+        if history_id in histories and bundle_id in bundles
+    }
+    observation_counts = (4, 4, 5, 5, 6, 6, 6, 6)
+    for index, (history_id, bundle_id) in enumerate(expected.items()):
+        history = histories[history_id]
+        bundle = bundles[bundle_id]
+        times = [720.0 * (point_index + 1) for point_index in range(observation_counts[index])]
+        observations = []
+        for elapsed in times:
+            dose = history["catalyst_scale"] * _thermal_dose(
+                history["steps"],
+                elapsed,
+                92500.0,
+            )
+            conversion = 1.0 - math.exp(-math.exp(20.888673) * dose)
+            observations.append(
+                {
+                    "elapsed_s": elapsed,
+                    "conversion": round(conversion, 8),
+                }
+            )
+        bundle["observations"] = observations
+    return payload, expected
+
+
 @pytest.fixture(scope="session")
 def lab_case(tmp_path_factory):
     root = tmp_path_factory.mktemp("laboratory")
@@ -158,7 +243,9 @@ def lab_case(tmp_path_factory):
 
 def test_report_file_is_published(lab_case):
     """题面：「报告文件必须是紧凑 JSON」。"""
+    print("CASE ASSIGN-TIE-01 KIN-KEYS-04")
     assert lab_case["output"].is_file()
+    assert lab_case["output"].stat().st_size > 0
 
 
 def test_success_is_silent(lab_case):
@@ -309,12 +396,45 @@ def test_assignments_are_sorted_by_history_id(lab_case):
     assert actual == sorted(actual, key=lambda value: value.encode("utf-8"))
 
 
-def test_every_assignment_covers_all_observation_indices(lab_case):
+def test_every_assignment_covers_all_observation_indices(lab_case, tmp_path):
     """[REPORT-09] [ASSIGN-KEYS-02] 题面：「两个索引数组都是非负整数数组、严格升序，且合起来恰好覆盖该托盘的全部读数下标」。"""
+    print("HARDCODE-BASE INPUT_SCENARIO_BASE")
     report = json.loads(lab_case["output"].read_text(encoding="utf-8"))
     assert all(
         sorted(item["supporting_indices"] + item["outlier_indices"]) == [0, 1, 2, 3]
         for item in report["assignments"]
+    )
+    print("HARDCODE-VARIANT INPUT_SCENARIO_MIXED")
+    mixed_payload, expected = _mixed_observation_payload()
+    source, output, ledger = _prepare_case(
+        tmp_path / "mixed-observations",
+        mixed_payload,
+    )
+    completed = _invoke(source, output, ledger)
+    assert completed.returncode == 0
+    mixed = json.loads(output.read_text(encoding="utf-8"))
+    observed = {
+        item["history_id"]: item["bundle_id"]
+        for item in mixed["assignments"]
+    }
+    bundles = {
+        item["bundle_id"]: item
+        for item in mixed_payload["sample_bundles"]
+    }
+    assert observed == expected
+    assert all(
+        len(item["supporting_indices"])
+        == len(bundles[item["bundle_id"]]["observations"]) - 1
+        for item in mixed["assignments"]
+    )
+    assert all(
+        sorted(item["supporting_indices"] + item["outlier_indices"])
+        == list(range(len(bundles[item["bundle_id"]]["observations"])))
+        for item in mixed["assignments"]
+    )
+    assert mixed["diagnostics"]["consensus_count"] == sum(
+        len(item["supporting_indices"])
+        for item in mixed["assignments"]
     )
 
 

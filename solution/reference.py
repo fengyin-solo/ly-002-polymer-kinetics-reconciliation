@@ -216,6 +216,8 @@ def validate_dataset(payload):
         raise Refusal("constraint_invalid")
     if min_points < 3:
         raise Refusal("constraint_invalid")
+    if any(len(bundle["observations"]) - 1 < min_points for bundle in bundles):
+        raise Refusal("constraint_invalid")
     if max_assignments != len(histories):
         raise Refusal("constraint_invalid")
     if max_assignments > 30:
@@ -341,13 +343,6 @@ class Reconciler:
             ]
             for bundle in self.bundles
         ]
-        self.support_count = min(
-            len(self.bundles[0]["observations"]) - 1,
-            max(
-                int(self.policy["consensus_min_points"]),
-                len(self.bundles[0]["observations"]) - 1,
-            ),
-        )
 
     def base_matrix(self, activation_energy):
         matrix = []
@@ -370,7 +365,7 @@ class Reconciler:
             for bundle_index, logs in enumerate(self.bundle_logs):
                 indices = self.bundle_time_indices[bundle_index]
                 base_values = [history_base[index] for index in indices]
-                count = min(self.support_count, len(logs) - 1)
+                count = len(logs) - 1
                 usable = all(
                     value > float(self.policy["conversion_floor"])
                     for value in logs

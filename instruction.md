@@ -71,7 +71,7 @@ B_h(Ea, t) = catalyst_scale_h * D_h(Ea, t)
 
 ## 复核报告
 
-顶层报告恰好有 `schema_version`、`kinetics`、`assignments`、`flagged_observations`、`diagnostics`、`ledger_entry_id` 六个键，顺序也按这里列出的顺序写出。
+报告根层依次写出下列六个成员：`schema_version`、`kinetics`、`assignments`、`flagged_observations`、`diagnostics`、`ledger_entry_id`；不得增加其他成员或改动序列。
 
 - `kinetics` 恰好有 `activation_energy_j_mol`、`ln_prefactor`、`conversion_rmse` 三个键。
 - 前两项分别采用焦耳每摩尔和对数形式，均为有限数值。
@@ -82,7 +82,7 @@ B_h(Ea, t) = catalyst_scale_h * D_h(Ea, t)
 - 复核结果要求活化能误差不超过 600 J/mol，对数指前因子误差不超过 0.020，支持点的转化率均方根误差不超过 `conversion_tolerance`。
 
 - `assignments` 是对象数组，按 `history_id` 的 UTF-8 字节序升序排列。
-- 每个归属对象恰好有 `history_id`、`bundle_id`、`supporting_indices`、`outlier_indices` 四个键。
+- 任一条归属记录只容纳 `history_id`、`bundle_id`、`supporting_indices`、`outlier_indices` 这四项。
 - 两个索引数组都是非负整数数组、严格升序，且合起来恰好覆盖该托盘的全部读数下标。
 - 每个对应至少保留三个支持点，最多有一个异常点。
 
@@ -103,7 +103,7 @@ B_h(Ea, t) = catalyst_scale_h * D_h(Ea, t)
 
 `--ledger` 指向 JSONL。
 
-- 每一行恰好有 `schema_version`、`entry_id`、`activation_energy_j_mol`、`ln_prefactor`、`assignments_sha256` 五个键。
+- 账本每行由 `schema_version`、`entry_id`、`activation_energy_j_mol`、`ln_prefactor`、`assignments_sha256` 五项组成，不多也不少。
 - 第一项 `schema_version` 是非布尔整数 `1`。
 - 两个摘要是 64 位小写十六进制，两个动力学数值为有限数。
 - 行内用紧凑 JSON，每行一个 LF，键顺序与上面相同。

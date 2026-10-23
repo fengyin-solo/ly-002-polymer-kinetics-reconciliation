@@ -178,7 +178,7 @@ def test_natural_gate_reconstructs_reaction_assignments(lab_case):
 
 
 def test_report_has_exact_top_level_keys(lab_case):
-    """题面：「顺序也按这里列出的顺序写出。」"""
+    """题面：「报告根层依次写出下列六个成员」"""
     report = json.loads(lab_case["output"].read_text(encoding="utf-8"))
     assert set(report) == {
         "schema_version",
@@ -191,7 +191,7 @@ def test_report_has_exact_top_level_keys(lab_case):
 
 
 def test_report_preserves_declared_key_order(lab_case):
-    """题面：「顺序也按这里列出的顺序写出。」"""
+    """题面：「报告根层依次写出下列六个成员」"""
     report = json.loads(lab_case["output"].read_text(encoding="utf-8"))
     assert list(report) == [
         "schema_version",
@@ -214,7 +214,7 @@ def test_kinetics_has_exact_keys(lab_case):
 
 
 def test_assignment_items_have_exact_keys(lab_case):
-    """题面：「`assignments` 是对象数组，按 `history_id` 的 UTF-8 字节序升序排列；每个对象恰好有 `history_id`、`bundle_id`、`supporting_indices`、`outlier_indices` 四个键。」"""
+    """题面：「任一条归属记录只容纳 `history_id`、`bundle_id`、`supporting_indices`、`outlier_indices` 这四项。」"""
     report = json.loads(lab_case["output"].read_text(encoding="utf-8"))
     assert all(
         set(item)
@@ -264,7 +264,7 @@ def test_flagged_observations_have_declared_order_and_reasons(lab_case):
 
 
 def test_ledger_has_exact_line_keys(lab_case):
-    """[LEDGER-01] [LEDGER-06] 题面：「每一行恰好有 `schema_version`、`entry_id`、`activation_energy_j_mol`、`ln_prefactor`、`assignments_sha256` 五个键」。"""
+    """[LEDGER-01] [LEDGER-06] 题面：「账本每行由 `schema_version`、`entry_id`、`activation_energy_j_mol`、`ln_prefactor`、`assignments_sha256` 五项组成，不多也不少」。"""
     lines = lab_case["ledger"].read_text(encoding="utf-8").splitlines()
     entry = json.loads(lines[0])
     assert list(entry) == [
@@ -303,7 +303,7 @@ def test_report_uses_six_and_eight_decimal_kinetics(lab_case):
 
 
 def test_assignments_are_sorted_by_history_id(lab_case):
-    """题面：「`assignments` 是对象数组，按 `history_id` 的 UTF-8 字节序升序排列；」。"""
+    """题面：「`assignments` 是对象数组，按 `history_id` 的 UTF-8 字节序升序排列」。"""
     report = json.loads(lab_case["output"].read_text(encoding="utf-8"))
     actual = [item["history_id"] for item in report["assignments"]]
     assert actual == sorted(actual, key=lambda value: value.encode("utf-8"))
@@ -356,7 +356,7 @@ def test_kinetics_match_laboratory_reference(lab_case):
 
 
 def test_diagnostics_count_the_laboratory_fixture(lab_case):
-    """[REPORT-10] [DIAG-COUNT-01] [DIAG-02] 题面：「`assigned_count` 必须等于反应釜数量，`unassigned_bundle_count` 必须等于托盘总数减已对应托盘数」。"""
+    """[REPORT-10] [DIAG-COUNT-01] [DIAG-02] 题面：「`diagnostics` 恰好有 `history_count`、`bundle_count`、`assigned_count`、`consensus_count`、`unassigned_bundle_count` 五个键」。"""
     report = json.loads(lab_case["output"].read_text(encoding="utf-8"))
     assert report["diagnostics"] == {
         "history_count": 26,
@@ -492,7 +492,7 @@ def test_bundle_key_set_is_exact(tmp_path, field):
 
 @pytest.mark.parametrize("field", ["elapsed_s", "conversion"])
 def test_observation_key_set_is_exact(tmp_path, field):
-    """题面：「每个对象恰好有 `elapsed_s`、`conversion`；」。"""
+    """题面：「每个观测对象恰好有 `elapsed_s`、`conversion`」。"""
     payload = _base_payload()
     payload["sample_bundles"][0]["observations"][0].pop(field)
     source, output, ledger = _prepare_case(tmp_path, payload)
